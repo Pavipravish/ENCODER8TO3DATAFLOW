@@ -1,17 +1,10 @@
 ### ENCODER 8TO3 DATAFLOW Modelling
-
-EXP-5
-
-DATE-29/10/2024 
-
+# DATE : 29/10/2024
 **AIM:**
 
 To implement  Encoder 8 To 3 in Dataflow Modelling using verilog and validating their functionality using their functional tables
 
-**SOFTWARE REQUIRED:**
-
-Quartus prime
-
+**SOFTWARE REQUIRED:** Quartus prime
 
 **THEORY**
 
@@ -42,50 +35,36 @@ Logical circuit of the above expressions is given below:
 Figure 02  Encoder 8 * 3
 
 **Procedure**
-
-/* write all the steps invloved */
-
- 
- 1.Type the program in Quartus software.
- 
- 2.Compile and run the program.
- 
- 3.Generate the RTL schematic and save the logic diagram.
- 
- 4.Create nodes for inputs and outputs to generate the timing diagra
+1.Type the program in Quartus software.
+2.Compile and run the program.
+3.Generate the RTL schematic and save the logic diagram.
+4.Create nodes for inputs and outputs to generate the timing diagram.
+5.For different input combinations generate the timing diagram.
 
 **PROGRAM**
 
 /* Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
+``` 
+module encoder(a0,a1,a2,d0,d1,d2,d3,d4,d5,d6,d7);
+input d0,d1,d2,d3,d4,d5,d6,d7;
+output a0,a1,a2;
+assign a0=d1|d3|d5|d7;
+assign a1=d2|d3|d6|d7;
+assign a2=d4|d5|d6|d7;
+endmodule 
+```
+# Developed by: PRAVISH J
+# RegisterNumber: 24901067
 
-odmule enc(a,b,c,y0,y1,y2,y3,y4,y5,y6,y7);
-
-input y0,y1,y2,y3,y4,y5,y6,y7;
-
-output a,b,c;
-
-assign a= ( y4 | y5 | y6 | y7);
-
-assign b= ( y2 | y3 | y6 | y7);
-
-assign c= ( y1 | y3 | y5 | y7);
-
-endmodule
-
-Developed by: PRAVISH J
-
-RegisterNumber: 24901067
-*/
 
 **RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
 
-![image](https://github.com/user-attachments/assets/d1ca018c-51bc-4f12-983f-74f6f1686a2f)
+![image](https://github.com/user-attachments/assets/ae1671bb-5ea3-4f4c-afcc-4510f2859f57)
 
 
 **TIMING DIGRAMS FOR Encoder 8 To 3 in Dataflow Modelling**
 
-![image](https://github.com/user-attachments/assets/40414214-6d45-4814-aed5-6f895844349f)
+![image](https://github.com/user-attachments/assets/aa2c9c2d-81da-44ad-b9b5-6118e2882139)
 
 **RESULTS**
-
-Thus the Encoder 8 to 3 is designed and the truthtable is verified
+Therefore the code has been successfully executed.
